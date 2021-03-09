@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+img {
+	max-width: 100%;
+	width: auto; /* pour ie */
+	height: auto;
+	-ms-interpolation-mode: bicubic; /* lissage pour IE */
+	image-rendering: -webkit-optimize-contrast; /* lissage pour Chrome au redimensionnement*/
+}
+body{
+    font-family: 'Athiti', sans-serif;
+	line-height: 1.5;
+	font-size: 1.8rem; 
+	margin: 0;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+h1, 
+h2, 
+h3, 
+h4, strong {
+	font-family: 'Merienda', cursive;
+	font-weight: bold;
+} 
+.logo strong::before, 
+.logo strong::after, 
+h1::before, 
+h1::after, 
+h2::before, 
+h2::after, 
+h3::before, 
+h3::after {
+	font-family: "Font Awesome 5 Free";
+	font-size: 1rem;
+	content: "\f005";
+	color: #950000;
+}
+
+.logo strong, 
+h1, 
+h2, 
+h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+/*----- HEADER -----*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+header strong{
+    font-size: 3rem;
+    color: black;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    align-items: center;
+}
+
+header img{
+    width: 150px;
+    margin: 5px auto;
+}
+header nav {
+    display: flex;
+    flex-direction: column;
+}
+header nav a {
+    background-color: #ebe3db;
+    padding: 5px;
+    margin: 0;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.active{
+    background-color: #4c4343;
+    color: white;
+}
+
+
+/*----- FOOTER -----*/
+footer{
+    color: white;
+    font-size: 1.6rem;
+}
+.flex{
+    background-image: url("../img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    text-align: center;
+}
+.flex p{
+
+    margin: 10px 0;
+}
+h4 {
+	font-size: 1.8rem;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px dashed #ebe3db;
+	margin-bottom: 1rem;
+}
+
+.footer {
+	padding: 2em;
+	text-align: center;
+	color: #fff;
+	background-color: #444;
+}
+
+.footer img {
+	width: 5%;
+}
+
+.footer a {
+	color: white;
+}
+
+.reseaux a {
+	color: #ebe3db;
+	font-size: 2.5rem;
+	text-decoration: none;
+	margin: 1rem;
+	transition: .7s color;
+}
+
+.reseaux a:hover {
+	color: #950000;
+}
+
+/* *****************************************************************
+VERSION TABLETTE
+***************************************************************** */
+
+@media screen and (min-width: 760px) {
+    /*----- HEADER -----*/
+    header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header nav a{
+        width: 25%;
+    }
+    
+    /*----- FOOTER -----*/
+    .flex {
+		padding: 2rem;
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+/* *****************************************************************
+VERSION DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 1100px) {
+    .container {
+		max-width: 1400px;
+		margin: auto;
+	}
+	
+	header{
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+	    align-items: center;
+	    width: 90%;
+	    margin: 20px auto;
+	}
+
+	.logo {
+		flex-direction: row;
+		margin-left: 2rem;
+	}
+	
+	header nav a{
+	    width: 30%;
+	    margin-left: 30px;
+	}
+}
